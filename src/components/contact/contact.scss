@@ -1,7 +1,7 @@
 @import "../../global.scss";
 
 .contact {
-  background-color: white;
+  background-color: $backgroundColor;
   display: flex;
 
   @include mobile {
@@ -15,6 +15,10 @@
     img {
       height: 100%;
     }
+    .fill {
+      filter: invert(41%) sepia(62%) saturate(2571%) hue-rotate(348deg)
+        brightness(96%) contrast(80%);
+    }
   }
   .right {
     flex: 1;
@@ -25,6 +29,7 @@
 
     h2 {
       font-size: 30px;
+      color: $textColor;
     }
 
     form {
@@ -39,6 +44,8 @@
         width: 300px;
         height: 30px;
         font-size: 14px;
+        background-color: $textColor;
+        border: 2px solid $mainColor;
 
         @include mobile {
           width: 200px;
@@ -50,6 +57,8 @@
         width: 300px;
         height: 200px;
         font-size: 14px;
+        background-color: $textColor;
+        border: 2px solid $mainColor;
 
         @include mobile {
           width: 200px;
@@ -60,8 +69,8 @@
       button {
         width: 150px;
         height: 30px;
-        color: white;
-        background-color: crimson;
+        color: $textColor;
+        background-color: $mainColor;
         border: none;
         border-radius: 10px;
         font-weight: 500;
@@ -73,7 +82,7 @@
       }
 
       span {
-        color: green;
+        color: $mainColor;
       }
     }
   }
